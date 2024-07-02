@@ -18,7 +18,7 @@
             </thead>
             <tbody>
             <tr v-for="item in postlist">
-                <td style="font-size: 30px" @click="jump(item)">{{item}}</td>
+                <td><button style="width: 100%;height: 150px;font-size: 40px" @click="jump(item)" class="btn">{{item}}</button></td>
             </tr>
             </tbody>
         </table>
@@ -36,9 +36,10 @@ const { createApp, ref } = Vue
         },
         setup() {
             return {
-                postlist: ref(
-                    ['【交流贴】这次我们聊聊交友渠道，自身赛道选择的问题-1','【交流贴】这次我们聊聊交友渠道，自身赛道选择的问题-2']
-                )
+                postlist: ref([
+                    '【交流贴】这次我们聊聊交友渠道，自身赛道选择的问题-1',
+                    '【交流贴】这次我们聊聊交友渠道，自身赛道选择的问题-2'
+                    ])
             }
         },
         mounted() {
