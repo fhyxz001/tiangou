@@ -17,8 +17,8 @@
             </tr>
             </thead>
             <tbody>
-            <tr v-for="item in postlist">
-                <td><button style="width: 100%;height: 150px;font-size: 40px" @click="jump(item)" class="btn">{{item}}</button></td>
+            <tr v-for="(item,index) in postlist">
+                <td><button style="width: 100%;height: 150px;font-size: 40px" @click="jump(item,index)" class="btn">{{item}}</button></td>
             </tr>
             </tbody>
         </table>
@@ -30,7 +30,7 @@ const { createApp, ref } = Vue
 
     createApp({
         methods: {
-            jump(item) {
+            jump(item,index) {
                 window.location.href = `https://fhyxz001.github.io/tiangou/content/${item}`
             }
         },
@@ -40,13 +40,14 @@ const { createApp, ref } = Vue
                     '【交流贴】这次我们聊聊交友渠道，自身赛道选择的问题-1.html',
                     '【交流贴】这次我们聊聊交友渠道，自身赛道选择的问题-2.html',
                     '觉醒JK.html',
-                    '关于如何追求妹子的一些见解（悟道篇）.html'
+                    '关于如何追求妹子的一些见解（悟道篇）.html',
+                    '【提高贴】关于性能力，阳痿早泄，实际操作，女方感受等问题.html'
                     ])
             }
         },
         mounted() {
             //postlist反转
-            this.postlist = this.postlist.reverse()
+            this.postlist = this.postlist.reverse();
         }
     }).mount('#app')
 </script>
