@@ -31,14 +31,15 @@ const { createApp, ref } = Vue
     createApp({
         methods: {
             jump(item) {
-                window.location.href = `https://fhyxz001.github.io/tiangou/content/${item}.html`
+                window.location.href = `https://fhyxz001.github.io/tiangou/content/${item}`
             }
         },
         setup() {
             return {
                 postlist: ref([
-                    '【交流贴】这次我们聊聊交友渠道，自身赛道选择的问题-1',
-                    '【交流贴】这次我们聊聊交友渠道，自身赛道选择的问题-2',
+                    '【交流贴】这次我们聊聊交友渠道，自身赛道选择的问题-1.html',
+                    '【交流贴】这次我们聊聊交友渠道，自身赛道选择的问题-2.html',
+                    '觉醒JK.html'
                     ])
             }
         },
